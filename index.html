@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Home</title>
+<!-- custom-theme -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //custom-theme -->
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<!-- stylesheet -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- //stylesheet -->
+<!-- online fonts -->
+<link href="http://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<!-- //online fonts -->
+<!-- font-awesome-icons -->
+<link href="css/font-awesome.css" type="text/css" rel="stylesheet"> 
+<!-- //font-awesome-icons -->
+<!-- Import pure.css -->
+<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+</head>
+<body>
+<div class="agileits_main">
+<!-- header -->
+<div class="w3_agile_logo">
+	<h1 class="text-center"><a href="index.html">Author： Zhou Zhou</a></h1>
+</div>
+<!-- banner -->
+<div class="w3_banner">
+	<div class="container">
+		<div class="slider">
+
+		  <script src="js/responsiveslides.min.js"></script>
+		  <script>
+			// You can also use "$(window).load(function() {"
+			$(function () {
+			  // Slideshow 4
+			  $("#slider4").responsiveSlides({
+				auto: true,
+				pager:true,
+				nav:true,
+				speed: 500,
+				namespace: "callbacks",
+				before: function () {
+				  $('.events').append("<li>before event fired.</li>");
+				},
+				after: function () {
+				  $('.events').append("<li>after event fired.</li>");
+				}
+			  });
+		
+			});
+		 </script>
+	   </div>
+	</div>   
+</div>
+
+  </div>	
+<!-- //banner -->	
+
+<!-- Map -->
+<div class="about_agileinfo" id="Map">
+  <div class="container">
+      <h3 class="title">Map</h3>
+	  <div class="about_main">
+		  <div id="vis1" class="col-md-8 col-sm-8 col-xs-8"></div>
+		  <div class="col-md-3 col-sm-3 col-xs-3">
+		    <h4>Lorem Ipsum</h4>
+			<P>Auris eget vestibulum augue. Integer sit amet tellus libero.
+			</P>
+		  </div>
+	  </div>	  
+  </div>
+ </div>
+<div class="about_agileinfo" id="Medals">
+	<div class="container">
+		<h3 class="title">Number of Different Medals</h3>
+		<div class="about_main">
+			<div id="vis2" class="col-md-8 col-sm-8 col-xs-8"></div>
+		</div>
+	</div>
+</div>
+<div class="about_agileinfo" id="MedalsLine">
+	<div class="container">
+		<div class="about_main">
+			<div class="col-md-6 col-sm-6 col-xs-6">
+				<h4>Lorem Ipsum</h4>
+				<P>Auris eget vestibulum augue. Integer sit amet tellus libero.
+				</P>
+			</div>
+			<div id="vis21" class="col-md-6 col-sm-6 col-xs-6"></div>
+		</div>
+	</div>
+</div>
+
+<div class="about_agileinfo" id="MedalsContinent">
+	<div class="container">
+		<h3 class="title">Number of Medals by Continent</h3>
+		<div class="about_main">
+			<div class="col-md-6 col-sm-6 col-xs-6">
+				<h4>Lorem Ipsum</h4>
+				<P>Auris eget vestibulum augue. Integer sit amet tellus libero.
+				</P>
+			</div>
+			<div id="vis3" class="col-md-6 col-sm-6 col-xs-6"></div>
+		</div>
+	</div>
+</div>
+
+<div class="about_agileinfo" id="Gender">
+	<div class="container">
+		<h3 class="title">Proportion of Gender by Discipline</h3>
+		<div class="about_main">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<h4>Lorem Ipsum</h4>
+				<P>Auris eget vestibulum augue. Integer sit amet tellus libero.
+				</P>
+			</div>
+			<div id="vis4" class="col-md-6 col-sm-6 col-xs-6"></div>
+		</div>
+	</div>
+</div>
+
+<div class="about_agileinfo" id="Map">
+	<div class="container">
+		<h3 class="title">Number of Athletes by Continent</h3>
+		<div class="about_main">
+			<div id="vis5" class="col-md-8 col-sm-8 col-xs-8"></div>
+			<div class="col-md-3 col-sm-3 col-xs-3">
+				<h4>Lorem Ipsum</h4>
+				<P>Auris eget vestibulum augue. Integer sit amet tellus libero.
+				</P>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- section -->
+<div class="w3layouts-section" id="blog">
+	<div class="container">   
+		<h3 class="title">Let the creativity Begin</h3>
+		<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<a href="#myModal" class="agilebtn" data-toggle="modal" data-target="#myModal"><span>Read More</span></a>
+	</div>
+</div>
+<!-- //section -->
+<!-- Gallery-plugin -->
+<script src="js/jquery.mobile.custom.min.js"></script>
+<script src="js/jquery.cm-overlay.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('.cm-overlay').cmOverlay();
+			});
+		</script>
+<!-- //Gallery-plugin -->
+<!-- start-smooth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>	
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+		
+		$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+</script>
+<script src="js/SmoothScroll.min.js"></script>
+<!-- //end-smooth-scrolling -->	
+<!-- smooth-scrolling-of-move-up -->
+<script type="text/javascript">
+	$(document).ready(function() {
+		$().UItoTop({ easingType: 'easeOutQuart' });
+	});
+</script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript">
+	var specVis1 = "js/total_medal_map.vg.json";
+	var specVis2 = "js/different_medal.vg.json";
+	var specVis21 = "js/different_medal_line.vg.json";
+	var specVis3 = "js/scatter_medal.vg.json";
+	var specVis4 = "js/gender_compare.vg.json";
+	var specVis5 = "js/athletes_by_continent.vg.json";
+	var specVis6 = "js/coaches_by_continent.vg.json";
+
+	vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
+	}).catch(console.error);
+
+	vegaEmbed('#vis2', specVis2, {"actions": false}).then(function(result) {
+	}).catch(console.error);
+
+	vegaEmbed('#vis21', specVis21, {"actions": false}).then(function(result) {
+	}).catch(console.error);
+
+
+	vegaEmbed('#vis3', specVis3, {"actions": false}).then(function(result) {
+	}).catch(console.error);
+
+	vegaEmbed('#vis4', specVis4, {"actions": false}).then(function(result) {
+	}).catch(console.error);
+
+	vegaEmbed('#vis5', specVis5, {"actions": false}).then(function(result) {
+	}).catch(console.error);
+
+	vegaEmbed('#vis6', specVis6, {"actions": false}).then(function(result) {
+	}).catch(console.error);
+</script>
+</body>
+</html>
