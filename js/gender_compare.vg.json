@@ -7,7 +7,7 @@
     {"fold": ["Female", "Male"]}
   ],
   "mark": "bar",
-  "width": {"step": 25},
+  "width": {"step": 17},
   "encoding": {
     "y": {
       "aggregate": "sum", "field": "value",
