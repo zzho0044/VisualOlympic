@@ -3,6 +3,7 @@
   "description": "A scatterplot showing MEDALS from different continents.",
   "width": 500,
   "height": 400,
+  "title": "Distribution of MEDALS",
   "data": {
     "url": "https://raw.githubusercontent.com/zzho0044/VisualOlympic/main/data/Medals.csv"
   },

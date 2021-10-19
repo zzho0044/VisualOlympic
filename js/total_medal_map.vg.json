@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Total Medal by country",
+  "title": "Total Medals by country",
   "width": 600,
   "height": 400,
   "params": [
@@ -70,7 +70,7 @@
       "field": "Total1",
       "type": "quantitative",
       "scale": {"scheme": "blues"},
-      "title":"per 100 people"
+      "title":"Number of Total Medals"
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country"},

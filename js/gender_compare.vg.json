@@ -3,6 +3,7 @@
   "data": {
     "url": "https://raw.githubusercontent.com/zzho0044/VisualOlympic/main/data/EntriesGender.csv"
   },
+  "title": "The Sex Proportion of Different Discipline",
   "transform": [
     {"fold": ["Female", "Male"]}
   ],
@@ -17,7 +18,8 @@
     "x": {"field": "Discipline"},
     "color": {
       "field": "key",
-      "scale": {"range": ["#675193", "#ca8861"]}
+      "scale": {"range": ["#675193", "#ca8861"]},
+      "title": "Sex"
     },
     "tooltip": [
       {"field": "Discipline", "type": "nominal"},

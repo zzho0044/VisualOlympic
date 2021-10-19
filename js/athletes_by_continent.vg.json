@@ -3,6 +3,7 @@
   "description": "A simple radial chart with embedded data.",
   "width": 300,
   "height": 300,
+  "title": "The Proportion of athletes from different Continent",
   "data": {
     "url": "https://raw.githubusercontent.com/zzho0044/VisualOlympic/main/data/Athletes.csv"
   },

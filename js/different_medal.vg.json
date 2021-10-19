@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Different countries won different MEDALS",
   "data": {
     "url": "https://raw.githubusercontent.com/zzho0044/VisualOlympic/main/data/Medals.csv"
   },
@@ -24,6 +25,7 @@
       }
     }
   ],
+  "width": {"step": 17},
   "transform": [
     {"fold": ["Bronze", "Silver","Gold"]},
     {"filter":"medal == null || datum.key == medal"}
