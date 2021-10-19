@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/zzho0044/VisualOlympic/main/data/Medals.csv"
+  },
+  "params": [
+    {
+      "name": "medal",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Bronze",
+          "Gold",
+          "Silver"
+        ],
+        "labels": [
+          "show_all",
+          "Bronze",
+          "Gold",
+          "Silver"
+        ],
+        "name": "medal : "
+      }
+    }
+  ],
+  "transform": [
+    {"fold": ["Bronze", "Silver","Gold"]},
+    {"filter":"medal == null || datum.key == medal"}
+  ],
+  "mark": {"type": "bar", "cornerRadiusTopLeft": 3, "cornerRadiusTopRight": 3},
+  "encoding": {
+    "x": {"field": "Team/NOC", "type": "ordinal"},
+    "y": {"aggregate":"sum","field": "value","title":"Number of Medals"},
+    "color": {"field": "key","scale":{"range":["#FF6633","#FFFF33","#999999"]}},
+    "tooltip": [
+      {"field": "Team/NOC", "type": "nominal", "title": "Country"},
+      {"field": "Gold", "type": "quantitative"},
+      {"field": "Silver", "type": "quantitative"},
+      {"field": "Bronze", "type": "quantitative"}
+    ]
+  }
+}

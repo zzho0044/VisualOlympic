@@ -1,0 +1,39 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple radial chart with embedded data.",
+  "width": 300,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/zzho0044/VisualOlympic/main/data/Athletes.csv"
+  },
+  "transform": [
+    {
+      "lookup": "NOC",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/zzho0044/VisualOlympic/main/js/ne_110m_admin_0_countries.topojson",
+          "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+        },
+        "key": "properties.NAME",
+        "fields": ["properties.CONTINENT"]
+      }
+    }
+  ],
+  "layer": [{
+    "mark": {"type": "arc", "innerRadius": 20, "stroke": "#fff"}
+  },{
+    "mark": {"type": "text", "radiusOffset": 10},
+    "encoding": {
+      "text": {"field": "properties.CONTINENT", "type": "nominal"}
+    }
+  }],
+  "encoding": {
+    "theta": {"aggregate":"count", "type": "quantitative", "stack": true},
+    "radius": {"aggregate":"count", "scale": {"type": "sqrt", "zero": true, "rangeMin": 20}},
+    "color": {"field": "properties.CONTINENT", "type": "nominal","title":"Continent"},
+    "tooltip": [
+      {"field": "properties.CONTINENT", "type": "nominal", "title": "Country"},
+      {"aggregate":"count", "type": "quantitative", "title": "Number of Athletes"}
+    ]
+  }
+}

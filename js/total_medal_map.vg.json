@@ -1,0 +1,80 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Total Medal by country",
+  "width": 500,
+  "height": 300,
+  "params": [
+    {
+      "name": "projection",
+      "value": "equalEarth",
+      "bind": {
+        "input": "select",
+        "options": [
+          "equalEarth",
+          "equirectangular",
+          "gnomonic",
+          "mercator",
+          "naturalEarth1",
+          "orthographic",
+          "stereographic",
+          "transverseMercator"
+        ],
+        "labels": [
+          "equalEarth",
+          "equirectangular",
+          "gnomonic",
+          "mercator",
+          "naturalEarth1",
+          "orthographic",
+          "stereographic",
+          "transverseMercator"
+        ],
+        "name": "projection : "
+      }
+    },
+    {
+      "name": "Medal_min",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 113,
+        "step": 1,
+        "name": "Min Total Medal : "
+      }
+    }
+  ],
+  "data": {
+    "url": "https://raw.githubusercontent.com/zzho0044/VisualOlympic/main/js/ne_110m_admin_0_countries.topojson",
+    "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+  },
+  "transform": [
+
+    {
+      "lookup": "properties.NAME",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/zzho0044/VisualOlympic/main/data/Medals.csv"
+        },
+        "key": "Team/NOC",
+        "fields": ["Total","Team/NOC"]
+      }
+    },
+    {"calculate": "(datum.Total + 0.1)/10 ", "as": "Total1"},
+    {"filter":"datum.Total1 > Medal_min"}
+  ],
+  "projection": {"type": {"expr": "projection"}},
+  "mark": {"type": "geoshape","stroke": "white"},
+  "encoding": {
+    "color": {
+      "field": "Total1",
+      "type": "quantitative",
+      "scale": {"scheme": "blues"},
+      "title":"per 100 people"
+    },
+    "tooltip": [
+      {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+      {"field": "Total", "type": "quantitative"}
+    ]
+  }
+}

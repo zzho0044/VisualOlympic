@@ -1,0 +1,17 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple bar chart with embedded data.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/zzho0044/VisualOlympic/main/data/Athletes.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "NOC", "type": "nominal", "axis": {"labelAngle": -90}},
+    "y": {"aggregate":"count", "type": "quantitative","title":"Number of Ahtletes"},
+    "tooltip": [
+      {"field": "NOC", "type": "nominal", "title": "Country"},
+      {"aggregate":"count","field": "Name", "type": "quantitative","title":"Number of Ahtletes"}
+    ]
+  }
+
+}
