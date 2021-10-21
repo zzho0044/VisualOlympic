@@ -42,6 +42,8 @@ label {
 }
 .text-center {
 	text-align: center;
+	font-size: 5em;
+	color:#FFFFFF;
 }
 /*-- //Reset-Code --*/
 p {
@@ -52,7 +54,22 @@ p {
 	font-size: 1em;
 	color:#888;
 }
-/*-- header styling starts here --*/
+.title {
+	text-align: center;
+	font-size: 3em;
+	color:#000000;
+}
+
+.content {
+	text-align: center;
+	font-size: 2em;
+	color:#000000;
+}
+.myHref {
+	font-size: 1em;
+	color:#FFFFFF;
+}
+-- header styling starts here --
 .agileits_main{
 	background:url(../images/1.jpg) no-repeat center;
 	background-size:cover;
