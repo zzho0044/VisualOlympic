@@ -69,7 +69,7 @@ p {
 	font-size: 1em;
 	color:#FFFFFF;
 }
--- header styling starts here --
+/*-- header styling starts here --*/
 .agileits_main{
 	background:url(../images/1.jpg) no-repeat center;
 	background-size:cover;
